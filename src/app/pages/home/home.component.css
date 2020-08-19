@@ -100,7 +100,7 @@ body{
     }
   }
   section{
-
+    background: url(https://static.wixstatic.com/media/9a25f2_5b06f362a68c412580d28d5156c0afd1.jpg) no-repeat;
     background-size: cover;
     height: calc(100vh - 80px);
   }

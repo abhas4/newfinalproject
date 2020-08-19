@@ -1,0 +1,30 @@
+
+<html>
+    <body>
+         <div class ="container-fluid" >
+             <h1> LOGIN </h1>
+             <form [formGroup]="addField">
+                   <div class="form-group">
+                           <label>Customer NAME </label>
+                               <input type="text" formControlName="cust_name" class="form-control" name="cust_name"  required>
+                    </div>
+                    <div class="form-group"> 
+                           <label> Age </label>
+                           <input type="password" formControlName="cust_age"class="form-control" name="cust_age" required >
+                   </div>
+                 
+                   
+                    <div *ngFor=" let itemrows of addField.get('itemRows')?.controls; let i=index">
+                     <div class="form-group"> 
+                         <label> Hobbies </label>
+                         <input type="text" formControlName="cust_hobbies"class="form-control" name="cust_hobbies" required >
+                 </div>
+                    </div>
+                 
+                   <button (click)="addNewRow()" class="btn btn-primary ">Add Hobbies</button>
+                   <button (click)="removeProduct()" class="btn btn-primary ">Remove</button>
+                   
+                   </form>
+         </div>
+                </body>
+                </html>

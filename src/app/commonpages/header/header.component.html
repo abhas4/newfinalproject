@@ -1,0 +1,27 @@
+
+ 
+     <!-- <nav *ngIf="isLoggedIn || isHome"> -->
+<nav *ngIf="router.url !== '/login' && router.url !== '/signup'">
+      <input type="checkbox" id="check">
+       <label for="check" class="checkbtn">
+         <i class="fas fa-bars"></i>
+       </label>
+       <label class="logo">Restaurant Guardian</label>
+       <ul>
+       
+
+
+<li><a *ngIf="signinService.isAdminRights()" routerLink="/home" routerLinkActive="active" >Home</a></li>
+        <li><a *ngIf="!signinService.isAdminRights()" routerLink="/dashboard" >Dashboard</a></li>
+        <li><a *ngIf="!signinService.isAdminRights()" routerLink="/login">Login</a></li>
+<li><a *ngIf="!signinService.isAdminRights()" routerLink="/signup" >Register</a></li>
+<li><a *ngIf="signinService.isAdminRights()" routerLink="/add-restaurant" routerLinkActive="active" >Add Restaurant </a></li>
+<li><a *ngIf="signinService.isAdminRights()" routerLink="/list-restaurant" routerLinkActive="active" >List Restaurant</a></li>
+<li><a routerLink="/contact">Contact</a></li>
+<li><a *ngIf="signinService.isAdminRights()"  routerLink="/dashboard" (click)="onLogout()" >Logout</a></li>
+
+
+ </ul>
+ </nav>
+   
+ 

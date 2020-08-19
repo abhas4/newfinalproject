@@ -1,0 +1,26 @@
+<html>
+<body>
+    <div class="container-fluid">
+        <h1> Update Restaurant </h1>
+        <form [formGroup]="updateForm" (ngSubmit)="toUpdate()">
+            <div class="form-group">
+                <label> Restaurant Name </label>
+                <input type="restaurants" formControlName="restaurants" class="form-control" name="restaurants"
+                    required>
+            </div>
+            <div class="form-group">
+                <label>Email </label>
+                <input type="text" formControlName="email" class="form-control" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label> Location </label>
+                <input type="location" formControlName="location" class="form-control" name="location" required>
+            </div>
+            <button class="btn btn-success" type="submit"> UPDATE </button>
+
+        </form>
+    </div>
+</body>
+
+</html>

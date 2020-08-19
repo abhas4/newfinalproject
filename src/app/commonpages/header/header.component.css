@@ -3,6 +3,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
+    
   }
   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
   *{
@@ -13,7 +14,7 @@ body{
     text-decoration: none;
   } 
   nav{
-    background:black;
+    background:#759A4C;
     height: 80px;
     width: 100%;
   }
@@ -35,7 +36,7 @@ body{
     margin: 0 2px;
   }
   nav ul li a{
-    color: #f2f2f2;
+    color: black;
     font-weight: 500;
     font-size: 20px;
     padding: 7px 13px;
@@ -44,7 +45,7 @@ body{
     font-family: 'Poppins', sans-serif;
   }
   a.active,a:hover{
-    background:#90B3B9;
+    background: #759A4C;
     transition: .5s;
   }
   .checkbtn{
@@ -100,7 +101,7 @@ body{
     }
   }
   section{
-
+    background: url(https://static.wixstatic.com/media/9a25f2_5b06f362a68c412580d28d5156c0afd1.jpg) no-repeat;
     background-size: cover;
     height: calc(100vh - 80px);
   }

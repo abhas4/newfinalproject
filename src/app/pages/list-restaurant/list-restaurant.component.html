@@ -1,0 +1,31 @@
+<div class="container">
+ 
+    <h3> List of registered Restaurant.</h3>
+
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th>NO.</th>
+          <th>RESTAURANT NAME</th>
+          <th>EMAIL</th>
+          <th>LOCATION</th>
+          <th>Details</th>
+          <th>Edit</th>
+          <th>Delete</th> 
+        </tr>
+     </thead>
+      <tbody>        
+        <tr class="success" *ngFor="let item of collection" >
+          <td>{{item.id}}</td>
+          <td>{{item.restaurants}}</td>
+          <td>{{item.email}}</td>     
+          <td>{{item.location}}</td>
+          <td><button class="btn btn-default"  title="Click to view details"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+          <td><button class="btn btn-info" (click)="toUpdate(item.id)" title="Click to update"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
+          <td><button class="btn btn-danger"  (click)="toDelete(item.id)"title="Click to delete user"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+        </tr>  
+      </tbody>
+    </table>
+
+
